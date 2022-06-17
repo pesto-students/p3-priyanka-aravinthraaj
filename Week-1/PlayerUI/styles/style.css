@@ -1,0 +1,157 @@
+/* style dependencies */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* style normalize */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/* main layout */
+
+.player .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* navbar  */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-around;
+  width: 5vw;
+  text-align: center;
+  background-color: #f0f0f0;
+  font-size: 1.3rem;
+}
+
+.navbar > i {
+  cursor: pointer;
+}
+
+/* banner design  */
+
+.banner {
+  display: flex;
+  padding: 40px;
+  width: 95vw;
+  background-color: #454545;
+  color: white;
+}
+
+.banner .album__cover {
+  margin-right: 40px;
+}
+
+.banner .album__accessibility {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner .album__accessibility .info > h1 {
+  margin-bottom: 20px;
+}
+
+.banner .album__accessibility .info > * {
+  margin-top: 10px;
+}
+
+.banner .album__accessibility .quick__access {
+  font-size: 1.2rem;
+  display: flex;
+}
+.banner .album__accessibility .quick__access > span {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.banner .album__accessibility .quick__access > span > i {
+  margin-right: 5px;
+}
+
+/* Playlist Design  */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 15px;
+}
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.song__list {
+  padding: 10px;
+}
+
+.song__list .sync {
+  background-color: transparent;
+  border: 1px solid black;
+  color: blue;
+  padding: 4px;
+  cursor: pointer;
+}
+
+/* footer  */
+
+.mini__player {
+  background-color: #43689b;
+  height: 10vh;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  color: white;
+}
+
+.mini__player .song__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mini__player .song__banner .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.mini__player .song__banner .cover > img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.mini__player .controls {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.mini__player .controls > i {
+  cursor: pointer;
+}
