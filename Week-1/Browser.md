@@ -42,7 +42,7 @@ The main functionality of browser is, where user can search and surf. The browse
   - **Home button**
     > Its the main page of the browser where user can keep all sort of important things. It can be list of shortcuts for the favorite websites of user or a search engine page like Google, Duckduckgo etc. 
   - **Browser Window**
-  - > This is where the browser renders the web content to the users it can be HTML, PDF, Audio, Video or any type of content.
+    > This is where the browser renders the web content to the users it can be HTML, PDF, Audio, Video or any type of content.
   - **Settings** 
     > This is where the user keps thier personal preferences like browser theme, wether to save history or not, accounts and password etc.
 - ####  Browser Engine
@@ -64,38 +64,116 @@ Render Engine is responsible for parsing the HTML and CSS file received from the
       3[Layout of \n render tree];
       4[Painting \n render tree];
       1-->2-->3-->4;
-      style 1 fill:#fff,color:#000
-      style 2 fill:#fff,color:#000
-      style 3 fill:#fff,color:#000
-      style 4 fill:#fff,color:#000
+      classDef customStyle fill:#fff;
+      class 1,2,3,4,5,6 customStyle;
+
 ```
 ### *Parsers*
-Parsing is one of the process of rendering engine. On parsing the document (HTML or CSS) translating the code and parse tree is generated. 
+Parsing is one of the process in rendering engine. On parsing the document (HTML or CSS) translating the code and parse tree is generated. 
 
 ```mermaid
   flowchart TB;
-      1[Parsing HTML \n to DOM Tree];
-      2[Render tree \n construction];
-      3[Layout of \n render tree];
-      4[Painting \n render tree];
-      1-->2-->3-->4;
-      style 1 fill:#fff,color:#000
-      style 2 fill:#fff,color:#000
-      style 3 fill:#fff,color:#000
-      style 4 fill:#fff,color:#000
+      1[[Source code]];
+      2{Parsing};
+      3[Parse tree];
+      4([Translation]);
+      5[Machine Code]
+      1-->2-->3-->4-->5;
+      classDef customStyle fill:#fff;
+      class 1,2,3,4,5,6 customStyle;
+
 ```
-### *Script Processors*
-### *Tree construction*
-### *Order of script processing*
-### *Layout and Painting*
+#### Types of parsers
+##### HTML Parser
+ HTML Parser is responsible for parsing the HTML Document to parse tree
 
+ The Dom tree is created using HTML Document as below
 
-
+```html
+<html>
+<body>
+  <p>
+    Hello World
+  </p>
+  <div> <img src="example.png"/></div>
+</body>
+</html>
+```
 
 ```mermaid
-  flowchart BT;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+  flowchart TB;
+      1(HTMLHtmlElement);
+      2(HTMLBodyElement);
+      3(HTMLParagraphElement);
+      4(HTMLDivElement);
+      5(Text);
+      6(HTMLImageElement);
+
+      1-->2-->3;
+      2-->4-->6;
+      3-->5;
+
+      classDef customStyle fill:#B3FFAA;
+      class 1,2,3,4,5,6 customStyle;
 ```
+
+##### CSS Parser
+
+```css
+p,div{
+  margin-top:3px;
+}
+.error {
+  color:red;
+}
+```
+
+```mermaid
+  flowchart TB;
+      1(CSSStyleSheet);
+      2(CSSRule);
+      3(Selectors);
+      4(Declaration);
+      5(CSSRule);
+      6(Selectors);
+      7(Declaration);
+      8[/p/]
+      9[/div/]
+      10[/Margin-top/]
+      11[/3px/]
+      12[/.error/]
+      13[/color/]
+      14[/red/]
+
+      1-->2-->3;
+      2-->4;
+      1-->5-->6;
+      5-->7;
+      3-->8
+      3-->9
+      4-->10
+      4-->11
+      6-->12
+      7-->13
+      7-->14
+      classDef customStyle fill:#ECAAFF ;
+      class 1,2,3,4,5,6,7,8,9,10,11,12,13,14 customStyle;
+```
+### *Script Processors*
+Script processor is responsible for processing js file and translating ion to machine code
+### *Order of script processing*
+```mermaid
+  flowchart TB;
+      1[Script];
+      2[Speculating Parsing];
+      3[Style sheets];
+
+      1-->2-->3;
+      classDef customStyle fill:#FF9A07;
+      class 1,2,3 customStyle;
+```
+
+### *Layout and Painting*
+After the render tree is created the position and sizes are calculated for the nodes. The process of calculating the position and size is called layout
+
+Painting is the final process once the calculations are done document is rendered using paint function and display content on the browser window.
