@@ -64,7 +64,7 @@ Render Engine is responsible for parsing the HTML and CSS file received from the
       3[Layout of \n render tree];
       4[Painting \n render tree];
       1-->2-->3-->4;
-      classDef customStyle fill:#fff;
+      classDef customStyle fill:#fff,color:#000;
       class 1,2,3,4,5,6 customStyle;
 
 ```
@@ -79,7 +79,7 @@ Parsing is one of the process in rendering engine. On parsing the document (HTML
       4([Translation]);
       5[Machine Code]
       1-->2-->3-->4-->5;
-      classDef customStyle fill:#fff;
+      classDef customStyle fill:#fff,color:#000;
       class 1,2,3,4,5,6 customStyle;
 
 ```
@@ -113,7 +113,7 @@ Parsing is one of the process in rendering engine. On parsing the document (HTML
       2-->4-->6;
       3-->5;
 
-      classDef customStyle fill:#B3FFAA;
+      classDef customStyle fill:#B3FFAA,color:#000;
       class 1,2,3,4,5,6 customStyle;
 ```
 
@@ -156,7 +156,7 @@ p,div{
       6-->12
       7-->13
       7-->14
-      classDef customStyle fill:#ECAAFF ;
+      classDef customStyle fill:#ECAAFF,color:#000 ;
       class 1,2,3,4,5,6,7,8,9,10,11,12,13,14 customStyle;
 ```
 ### *Script Processors*
@@ -169,7 +169,7 @@ Script processor is responsible for processing js file and translating ion to ma
       3[Style sheets];
 
       1-->2-->3;
-      classDef customStyle fill:#FF9A07;
+      classDef customStyle fill:#FF9A07,color:#000;
       class 1,2,3 customStyle;
 ```
 
