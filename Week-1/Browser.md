@@ -27,12 +27,12 @@ The main functionality of browser is, where user can search and surf. The browse
       id1 --> id2 --> id3 --> id4;
       id2 -->id5
       end
-      style id1 fill:#FFA07A
-      style id2 fill:#D462FF
-      style id3 fill:#52D017
-      style id4 fill:#FFFF33
-      style id5 fill:#E30B5D
-      style box fill:#5DADE2
+      style id1 fill:#FFA07A,color:#000
+      style id2 fill:#D462FF,color:#000
+      style id3 fill:#52D017,color:#000
+      style id4 fill:#FFFF33,color:#000
+      style id5 fill:#E30B5D,color:#000
+      style box fill:#5DADE2,color:#000
 ```
 - #### User Interface
   - **Address bar**
@@ -64,10 +64,10 @@ Render Engine is responsible for parsing the HTML and CSS file received from the
       3[Layout of \n render tree];
       4[Painting \n render tree];
       1-->2-->3-->4;
-      style 1 fill:#fff
-      style 2 fill:#fff
-      style 3 fill:#fff
-      style 4 fill:#fff
+      style 1 fill:#fff,color:#000
+      style 2 fill:#fff,color:#000
+      style 3 fill:#fff,color:#000
+      style 4 fill:#fff,color:#000
 ```
 ### *Parsers*
 Parsing is one of the process of rendering engine. On parsing the document (HTML or CSS) translating the code and parse tree is generated. 
@@ -79,10 +79,10 @@ Parsing is one of the process of rendering engine. On parsing the document (HTML
       3[Layout of \n render tree];
       4[Painting \n render tree];
       1-->2-->3-->4;
-      style 1 fill:#fff
-      style 2 fill:#fff
-      style 3 fill:#fff
-      style 4 fill:#fff
+      style 1 fill:#fff,color:#000
+      style 2 fill:#fff,color:#000
+      style 3 fill:#fff,color:#000
+      style 4 fill:#fff,color:#000
 ```
 ### *Script Processors*
 ### *Tree construction*
