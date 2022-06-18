@@ -52,7 +52,7 @@ body {
   padding: 40px;
   width: 95vw;
   background-color: #454545;
-  color: white;
+  color: #fff;
 }
 
 .banner .album__cover {
@@ -107,9 +107,10 @@ tr:nth-child(even) {
 
 .song__list .sync {
   background-color: transparent;
-  border: 1px solid black;
-  color: blue;
+  border: 1px solid #000000;
+  color: #0000ff;
   padding: 4px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -121,7 +122,7 @@ tr:nth-child(even) {
   display: flex;
   padding: 10px;
   justify-content: space-between;
-  color: white;
+  color: #ffffff;
 }
 
 .mini__player .song__banner {
