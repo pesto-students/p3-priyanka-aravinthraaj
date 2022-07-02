@@ -1,3 +1,5 @@
+/* Using the `call` and `apply` methods to call the function `calculateMarksofStudent` with the
+`Student` object as the `this` context. */
 let Student = {
   standard: "10th",
   section: "A",
