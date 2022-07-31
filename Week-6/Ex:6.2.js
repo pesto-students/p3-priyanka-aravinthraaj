@@ -1,5 +1,5 @@
 function print(arr, rowStart, rowEnd, columnStart, columnEnd) {
-  if (rowStart >= columnStart || rowEnd >= columnEnd) return
+  if (rowStart >= columnStart || rowEnd >= columnEnd) return // 0 4 0 4 => 1 3 1 3 => 2 2 2 2
 
   for (let pointer = rowEnd; pointer < columnEnd; pointer++) { // 00,01,02,03  => 11, 12
     console.log(arr[rowStart][pointer] + " ")
