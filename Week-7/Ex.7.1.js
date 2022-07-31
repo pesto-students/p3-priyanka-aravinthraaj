@@ -2,7 +2,6 @@ class Node {
   constructor(element) {
     this.element = element
     this.next = null
-    this.flag = 0
   }
 }
 
@@ -46,28 +45,21 @@ class LinkedList {
     this.head = prev
   }
 
-  rotate(k){
-    var curr = this.head
-    while (k--) {
-      console.log(curr.element)
-      curr = curr.next
-    }
-    var temp = curr.next
-    curr.next = null
-    temp.next = this.head
-    this.head = temp
-  }
-  detectLoop(){
-    var curr = this.head
-    while(curr != null){
-      if(curr.flag == 1){
-        return true
-      }
-      curr.flag = 1
-      curr = curr.next
-    }
-    return false
-  }
+  // rotate(k) {
+  //   if (k == this.size || k % this.size == 0) {
+  //     this.printList()
+  //   } else {
+  //     k = k % this.size
+  //     var curr = this.head
+  //     while (k-- - 1) {
+  //       curr = curr.next
+  //     }
+  //     var temp = this.head
+  //     this.head = curr.next
+  //     this.tail.next = temp
+  //     curr.next = null
+  //   }
+  // }
 
   printList() {
     var curr = this.head
@@ -81,8 +73,6 @@ class LinkedList {
 }
 
 let LL1 = new LinkedList()
-let LL2 = new LinkedList()
-
 
 LL1.append(10)
 LL1.append(20)
@@ -90,18 +80,9 @@ LL1.append(30)
 LL1.append(40)
 LL1.append(50)
 
+LL1.printList()
+
+LL1.reverse()
 
 
-// LL1.printList()
-
-
-// // LL1.reverse()
-
-
-// LL1.rotate(2)
-// LL1.printList()
-LL1.head.next.next.next.next = LL1.head
-
-console.log(LL1.detectLoop())
-
-
+LL1.printList()
