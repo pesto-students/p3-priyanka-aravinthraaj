@@ -24,4 +24,7 @@ for (let i of fibonacciRange) {
   console.log(i)
 }
 
+
 console.log(fibonacciRange.info)
+
+
