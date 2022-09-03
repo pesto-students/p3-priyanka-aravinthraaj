@@ -1,0 +1,258 @@
+/* style dependencies */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* style normalize */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+/* main layout */
+
+.player .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* navbar  */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-around;
+  /* width: 5vw; */
+  padding: 10px;
+  width: 5%;
+  text-align: center;
+  background-color: #f0f0f0;
+  font-size: 1.3em;
+}
+
+.navbar > i {
+  font-weight: bold;
+  cursor: pointer;
+  transition: .1s ease-out;
+}
+.navbar > i:hover{
+  transition: .1s ease-out;
+  color: #2d2dff;
+}
+
+/* banner design  */
+.album__container{
+  width: 95%;
+}
+.banner {
+  display: flex;
+  padding: 40px;
+  /* width: 95%; */
+  background-color: #454545;
+  color: #fff;
+}
+
+.banner .album__cover {
+  margin-right: 40px;
+}
+.banner .album__cover > img {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+.banner .album__accessibility {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner .album__accessibility .info > h1 {
+  margin-bottom: 20px;
+}
+
+.banner .album__accessibility .info > * {
+  margin-top: 10px;
+}
+
+.banner .album__accessibility .quick__access {
+  font-size: 1.2em;
+  display: flex;
+}
+.banner .album__accessibility .quick__access > span {
+  margin-right: 20px;
+  cursor: pointer;
+  transition: .5s ease-out;
+}
+.banner .album__accessibility .quick__access > span:hover {
+  transition: .5s ease-out;
+  color: #ffff00;
+}
+.banner .album__accessibility .quick__access > span > i {
+  margin-right: 5px;
+}
+
+/* Playlist Design  */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 15px;
+}
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.song__list {
+  padding: 10px;
+}
+
+.song__list .sync {
+  background-color: transparent;
+  border: 1px solid #000000;
+  color: #0000ff;
+  padding: 4px;
+  text-transform: uppercase;
+  transition: .5s ease-out;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.song__list .sync:hover {
+  color: #ffffff;
+  background-color: #0000ff;
+  transition: .5s ease-out;
+  cursor: pointer;
+}
+
+/* footer  */
+
+.mini__player {
+  background-color: #43689b;
+  height: 10vh;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.mini__player .song__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mini__player .song__banner .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.mini__player .song__banner .cover > img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.mini__player .controls {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.mini__player .controls > i {
+  cursor: pointer;
+  transition: .5s ease-out;
+}
+
+.mini__player .controls > i:hover {
+  color: #ffff00;
+  transition: .5s ease-out;
+}
+
+
+@media screen and (max-width: 481px) {
+  body{
+    font-size: 10px;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  td,
+  th {
+    text-align: left;
+    padding: 5px;
+  }
+  .song__list .sync{
+    display: none;
+  }
+  
+  footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* Smart phone (landscape) */
+}
+@media screen and (max-width: 769px) {
+  body{
+    font-size: 12px;
+  }
+  .player .wrapper {
+    flex-direction: column;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+  }
+  .album__container{
+    width: 100%;
+  }
+  .banner .album__accessibility .info > h1 {
+    margin-bottom: 5px;
+}
+.mini__player .song__banner .cover > img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+  footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  /* Tablet */
+}
