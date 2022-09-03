@@ -19,7 +19,7 @@ function App() {
       setShortenedLink(response.data.result.full_short_link)
       setApiLoader(false)
     } catch (e) {
-      console.log(e)
+      setApiLoader(e)
     }
   }
   return (
